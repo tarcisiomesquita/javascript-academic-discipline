@@ -1,0 +1,146 @@
+body {
+    background-color: #eeddd5;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+.result-box{
+    width: fit-content;
+    height: 100px;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#8f0000;
+    color: white;
+    font-size: x-large;
+}
+
+.question-box, .result-box {
+     border-radius: 15px;
+}
+
+.container {
+    border: 1px solid black;
+    display: flex;
+    justify-content:space-evenly;
+    margin: 100px;  
+    background-color: #c9d1dd;
+    flex-wrap: wrap;
+}
+
+form {
+    width: max-content;
+}
+
+.calculate-button {
+    display: flex;
+    align-content: center;
+}
+
+.result-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.no-flex-container {
+    margin: 100px;
+    border: 1px solid black;
+    background-color: #abc1d6;
+}
+
+caption {
+    caption-side: top; 
+}
+
+caption p {
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+
+tr {
+    text-align: center; 
+}
+
+tr.green-background{
+    background-color: palegreen;
+}
+
+tr.red-background{
+    background-color: #ff5252;
+
+}
+
+thead, tfoot {
+    background-color: lightgrey;
+}
+
+.mb-3 {
+    display: flex;
+    justify-content: right; 
+}
+
+input::placeholder {
+    overflow: visible;
+}
+
+#q6 .mb-3, #q6 label, #q6 input {
+    display: block;
+}
+
+.invalid {
+    color: red
+}
+
+#logged-in {
+    display: none;
+}
+
+#sign-up {
+    display: none;
+    color: white
+}
+
+#logged-in {
+    width: 200px;
+    word-wrap: break-word;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.question-box {
+    background-color: #0e2688;
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+
+}
+
+.question-title {
+    flex-basis: 100%;
+    margin: 10px
+}
+
+.table {
+    margin: 30px 0;
+}

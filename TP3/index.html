@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>TP3 Javascript</title>
+</head>
+<body>
+    <div id="q1">
+        <div class="container">
+            <div class="question-title"><h1>Question 1</h1></div>
+            <form class="question-box">
+                <div class="mb-3">
+                    <label for="min-value">Minimum value:</label>
+                    <input id="min-value" type="number" placeholder="Enter a mininum value" required>
+                </div>
+                <div class="mb-3">
+                    <label for="max-value">Maximum value:</label>
+                    <input id="max-value" type="number" placeholder="Enter a maximum value" onchange="validateMaximumValue()">
+                </div>
+                <div class="center">
+                    <button type="button" class="calculate-button" onclick="q1Calculate()">Calculate</button>
+                </div>
+            </form>
+            <div class="result-box">
+                <div id="result-q1"></div> 
+            </div>
+        </div>
+    </div>
+    <div id="q2">
+        <div class="container">
+            <div class="question-title"><h1>Question 2</h1></div>
+            <form class="question-box"> 
+                <div class="mb-3">
+                    <label for="fat-number">Calculate fatorial of:</label>
+                    <input id="fat-number" type="number" placeholder="Enter a number">
+                </div>
+                <div class="center">
+                    <button type="button" class="calculate-button" onclick="q2Calculate()">Calculate</button>
+                </div>
+            </form>
+            <div class="result-box">
+                <div id="result-q2"></div>
+            </div>
+        </div>
+    </div>
+    <div id="q3">
+        <div class="no-flex-container">
+            <div class="question-title"><h1>Question 3</h1></div>
+            <div class="center">
+                <button type="button" class="create-button" onclick="createReport()">Create Report</button> 
+            </div>
+            <table class="table">
+                <caption></caption>
+                <thead></thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+    <div id="q4">
+        <div class="container">
+            <div class="question-title"><h1>Question 4</h1></div>
+            <form class="question-box">
+                <div class="mb-3">
+                    <label for="numbers-quantity">Number's quantity:</label>
+                    <input type="number" id="numbers-quantity" placeholder="Enter a number's quantity">
+                </div>
+                <div class="mb-3">
+                    <label for="mininum-value">Minimum value:</label>
+                    <input type="number" id="minimum-value" placeholder="Enter a minimum value">
+                </div>
+                <div class="mb-3">
+                    <label for="maximum-value">Maximum value:</label>
+                    <input type="number" id="maximum-value" placeholder="Enter a maximum value">
+                </div>
+                <div class="center">
+                    <button type="button" class="calculate-button" onclick="q4Calculate()">Calculate</button>
+                </div>
+            </form>
+            <div class="result-box">
+                <div id="result-q4"></div> 
+            </div>
+        </div>
+    </div>
+    <div id="q5">
+        <div class="container">
+            <div class="question-title"><h1>Question 5</h1></div>
+            <form class="question-box">
+                <div class="mb-3">
+                    <label for="side-a">Side A:</label>
+                    <input type="number" name="" id="side-a" placeholder="Enter the triangle's side A">
+                </div>
+                <div class="mb-3">
+                    <label for="side-b">Side B:</label>
+                    <input type="number" name="" id="side-b" placeholder="Enter the triangle's side B">
+                </div>
+                <div class="mb-3"> 
+                    <label for="side-c">Side C:</label>
+                    <input type="number" name="" id="side-c" placeholder="Enter the triangle's side C">
+                </div>
+                <div class="center">
+                    <button type="button" class="calculate-button" onclick="q5Calculate()">Calculate</button>
+                </div>
+            </form>
+            <div class="result-box">
+                <div id="result-q5"></div> 
+            </div>
+        </div>
+    </div>
+    <div id="q6">
+        <div class="container">
+            <div class="question-title"><h1>Question 6</h1></div>
+            <div id="logged-out" class="row">
+                <div id="login" class="col question-box">
+                    <span class="caption"><h2>Login</h2></span>
+                    <form>
+                        <span id="login-invalid" class="invalid"></span>
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">E-mail</label>
+                            <input type="email"form-control" id="login-email" placeholder="Enter your e-mail adress">
+                            <div id="invalid-email" class="invalid-feedback"><p>Abracadabra</p></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password-login" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="login-password" placeholder="Enter your passwordr" requireds>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-dark" onclick="validateLogin()">Login</button>
+                            <button type="button" class="btn btn-primary" onclick="showSignUp()">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="sign-up" class="col question-box">
+                    <span class="caption"><h2>Sign Up</h2></span>
+                    <form>
+                        <div class="mb-3">
+                            <label for="signup-email" class="form-label">E-mail</label>
+                            <input type="email"form-control" id="signup-email" placeholder="Enter your e-mail adress">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signup-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signup-password" placeholder="Enter your passwordr">
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary" onclick="signUpUser()">Ok</button>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+            <div id="logged-in" class="question-box">
+                <span class="caption"><h2>Home</h2></span>
+                <h3>Welcome, now you're logged in!</h3>
+                <div>
+                    <button type="button" class="btn btn-dark" onclick="logOut()">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="q1.js"></script>
+    <script src="q2.js"></script>
+    <script src="q3.js"></script>
+    <script src="q4.js"></script>
+    <script src="q5.js"></script>
+    <script src="q6.js"></script>
+</body>
+</html>
